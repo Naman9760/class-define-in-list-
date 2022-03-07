@@ -1,0 +1,48 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections;
+
+namespace ConsoleApp7
+{
+    class Employee
+    {
+       public string name;
+        public int id;
+        public int age;
+        public Employee(string n, int i, int a)
+        {
+            this.name = n;
+            this.age = a;
+            this.id = i;
+
+
+        }
+
+
+
+        static void Main(string[] args)
+        {
+            Employee obj = new Employee("ashish", 102, 21);
+            Employee obj1 = new Employee("naman ", 103, 22);
+            Employee obj2 = new Employee("manish", 104, 23);
+            List<Employee> data = new List<Employee>();
+
+            data.Add(obj);
+            data.Add(obj1);
+            data.Add(obj2);
+            foreach (Employee emp in data)
+            {
+                Console.WriteLine(" name {0} "+emp.name);
+                Console.WriteLine("age {1}"+emp.age);
+                Console.WriteLine("id {2}"+emp.id);
+                
+            }
+            Console.ReadLine();
+
+        }
+
+    }
+}
